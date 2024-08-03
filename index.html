@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/71dac4e3f9.js" crossorigin="anonymous"></script>
+    <style>
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+          }
+    </style>
+</head>
+
+<body class="bg-[#111] flex items-center justify-center h-screen w-full orbitron">
+    <div class="h-[400px] w-[500px] border-2 border-[#1fbc0d] p-10 flex flex-col gap-10">
+        <h1 class="font-semibold text-[21px] text-[#1fbc0d] orbitron tracking-wider">Password Generator</h1>
+        <div class="flex flex-row items-center justify-center w-full border-[#1fbc0d] border-2">
+            <input id="inputs" type="text" class="p-2 w-[90%] bg-transparent outline-none text-white cut-border">
+            <button onclick="generatePassword()"><i class="fa-solid fa-rotate text-[#1fbc0d]"></i></button>
+        </div>
+        <div class="w-full text-center">
+            <button class="text-[#1fbc0d] border-[#1fbc0d] hover:text-black hover:bg-[#1fbc0d] font-semibold pl-4 pr-4 pt-2 pb-2 border-2" onclick="copyText()">Copy Password  <i class="fa-solid fa-copy"></i></button>
+        </div>
+        <div>
+            <h1 class="text-white font-semibold text-[22px] orbitron">Last Password</h1>
+            <h1 class="text-[#1fbc0d] text-center font-semibold text-[22px] orbitron"  id="lastPassword"></h1>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
